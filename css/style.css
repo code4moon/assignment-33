@@ -97,3 +97,13 @@
   border-bottom-left-radius: 0;
   cursor: pointer;
 }
+
+.slider {
+  height: 70px;
+  width: 70px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+  border: 3px solid transparent;
+}
