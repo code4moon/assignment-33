@@ -38,6 +38,8 @@
   border: 3px solid transparent;
 }
 
+/* meaningful section */
+
 /* ******************************* */
 /* FAQ section styling */
 /* ****************************** */
@@ -119,4 +121,12 @@
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   cursor: pointer;
+}
+
+.footer {
+  padding: 30px;
+  text-align: center;
+  width: 100%px;
+  height: 100px;
+  color: #ffffff;
 }
