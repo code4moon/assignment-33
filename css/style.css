@@ -73,3 +73,27 @@
   left: 30px;
   top: 46px;
 }
+.email-bar {
+  flex-grow: 1;
+  display: flex;
+  margin: 0 2rem 0 4rem;
+}
+.email {
+  width: 100%;
+  font-size: inherit;
+  padding: 0.4em;
+  border: 1px solid #777;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.send-btn {
+  display: flex;
+  align-items: center;
+  padding: 0 1.25rem;
+  border: 1px solid #777;
+  background-color: burlywood;
+  border-left: none;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  cursor: pointer;
+}
