@@ -7,15 +7,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Assignment-33</title>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 
   <link rel="stylesheet" href="css/style.css">
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <script src="https://kit.fontawesome.com/953da730eb.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"></script>
 
 
 </head>
@@ -52,17 +52,45 @@
           <!-- <button class="ms-5 btn btn-outline-success" type="submit">Login</button> -->
 
           <!-- Button trigger modal -->
-          <button type="button" class=" btn btn-secondary" data-toggle="modal" data-target="#exampleModal"
+          <!-- <button type="button" class=" btn btn-secondary" data-toggle="modal" data-target="#exampleModal"
+            style="background-color: burlywood; border-style: none;">
+            Free Consultation
+          </button> -->
+
+          <!-- Modal -->
+
+          <!-- <div class="modal " id="exampleModal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                Lorem, ipsum dolor.
+              </div>
+            </div>
+          </div> -->
+
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
             style="background-color: burlywood; border-style: none;">
             Free Consultation
           </button>
 
           <!-- Modal -->
-
-          <div class="modal " id="exampleModal">
-            <div class="modal-dialog">
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
               <div class="modal-content">
-                Lorem, ipsum dolor.
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Dont worry, you will get justice</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  ...
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type=" button" class="btn btn-primary">Save changes</button>
+                </div>
               </div>
             </div>
           </div>
@@ -179,84 +207,121 @@
           neighbors<br> children while she's in the hospital, you're doing a good service.</p>
       </div>
 
-      <div class="row row-cols-1 row-cols-md-2 mt-5 g-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div id="accordion">
+              <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                      aria-controls="collapseOne">
+                      What is the Difference between Flexbox & Grid
+                    </button>
+                  </h5>
+                </div>
 
-        <div class="col">
-          <div class="accordion" id="accordionExample">
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                  aria-expanded="true" aria-controls="collapseOne">
-                  Accordion Item #1
-                </button>
-              </h2>
-              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse
-                  plugin adds the appropriate classes that we use to style each element. These classes control the
-                  overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this
-                  with custom CSS or overriding our default variables. It's also worth noting that just about any HTML
-                  can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                  <div class="card-body">
+                    Grid:CSS Grid Layout, is a two-dimensional grid-based layout system with rows and columns, making it
+                    easier to design web pages without having to use floats and positioning. Like tables, grid layout
+                    allow us to align elements into columns and rows.
+
+                    To get started you have to define a container element as a grid with display: grid, set the column
+                    and row sizes with grid-template-columns and grid-template-rows, and then place its child elements
+                    into the grid with grid-column and grid-row.
+                    Flexbox: The CSS Flexbox offers a one-dimensional layout. It is helpful in allocating and aligning
+                    the space among items in a container (made of grids). It works with all kinds of display devices and
+                    screen sizes.
+
+                    To get started you have to define a container element as a grid with display: flex;
+
+
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingTwo">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                      aria-expanded="false" aria-controls="collapseTwo">
+                      What is the purpose of Media Query ?
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                  <div class="card-body">
+                    Media queries consist of a media type along with one or more expressions that conditionally check
+                    for certain media features, particularly that of screen sizes. The logical expressions in a media
+                    query can be either true or false; it is true if the media type of the query matches that of the
+                    media type of the device where the user agent (Web browser) is running on; otherwise, it is false.
+                    When the media query results to true, then the corresponding style rules specified will be applied,
+                    following normal cascading rules. It must be noted that, even if the query results to false, style
+                    sheets specified within the
+                    <link> tag are still downloaded, but are simply not applied.
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingTwo">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                      aria-expanded="false" aria-controls="collapseTwo">
+                      What is css Box model & how does it work ?
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                  <div class="card-body">
+                    The CSS box model is a set of rules that help dictate how items are displayed within your website or
+                    web project. It defines the parameters of elements, their boundaries, and spacing both in and
+                    outside the target element.
+                    The box model in CSS is a set of rules that determine how your web page is rendered on the internet.
+                    In this model, a rectangular box is generated for HTML elements. Each is laid out according to its
+                    dimension, type, positioning, relationship to other elements, and external factors like viewport
+                    size. This box consists of content, padding, a border, and margin.
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingThree">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
+                      aria-expanded="false" aria-controls="collapseThree">
+                      What is Semantic tag ?
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                  <div class="card-body">
+                    HTML Semantic tags introduce meaning to the web page rather than just presentation. A semantic tag
+                    clearly describes its meaning to both the browser and the developer. Semantic tags have many
+                    advantages over non-semantic tags like semantic tags are of great help to screen readers, and they
+                    also help in code optimization.
+                    A Semantic tag clearly describes its meaning to both the browser and the developer. For example, a
+                    developer knows content inside is of the navigation bar, and the browser knows how to display it.
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingTwo">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  Accordion Item #2
-                </button>
-              </h2>
-              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse
-                  plugin adds the appropriate classes that we use to style each element. These classes control the
-                  overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this
-                  with custom CSS or overriding our default variables. It's also worth noting that just about any HTML
-                  can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingThree">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  Accordion Item #3
-                </button>
-              </h2>
-              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse
-                  plugin adds the appropriate classes that we use to style each element. These classes control the
-                  overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this
-                  with custom CSS or overriding our default variables. It's also worth noting that just about any HTML
-                  can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                </div>
-              </div>
-
-            </div>
-
           </div>
 
-        </div>
-        <div class="col text-center">
-          <img class="w-100" src="images/faq.png" alt="">
+          <div class="col-md-6">
+
+            <img class="w-100" src="images/faq.png" alt="">
+
+          </div>
         </div>
       </div>
+
 
     </section>
 
 
   </main>
+  <!-- footer section -->
 
 
-  <!-- bootstrap js -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-    crossorigin="anonymous"></script>
 
 </body>
 
